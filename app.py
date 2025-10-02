@@ -32,7 +32,7 @@ def _get_secret_or_default(key: str, default: str) -> str:
 # Prefer environment variables, then st.secrets, then provided defaults
 SPOTIPY_CLIENT_ID = os.getenv("SPOTIPY_CLIENT_ID") or _get_secret_or_default("SPOTIPY_CLIENT_ID", "b3a32d67ba4c43f0a77e2048bb0d5dea")
 SPOTIPY_CLIENT_SECRET = os.getenv("SPOTIPY_CLIENT_SECRET") or _get_secret_or_default("SPOTIPY_CLIENT_SECRET", "8a41e114af0b40f5b79c7ac145e9483f")
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or _get_secret_or_default("GOOGLE_API_KEY", "AIzaSyC3jlGZ0ig2I8BNamZgkvuf42lFNbmXINY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or _get_secret_or_default("GOOGLE_API_KEY", "")
 # Prefer GEMINI_API_KEY (new var), fallback to GOOGLE_API_KEY
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or GOOGLE_API_KEY
 # Allow overriding the Gemini model via env or secrets; default to a supported model
