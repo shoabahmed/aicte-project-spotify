@@ -19,7 +19,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
 # 2) Install dependencies
-pip install -U streamlit spotipy google-genai
+pip install -U streamlit spotipy google-genai python-dotenv requests
 
 # 3) Set environment variables for this session (recommended)
 $env:SPOTIPY_CLIENT_ID = "your_spotify_client_id"
@@ -73,4 +73,3 @@ streamlit run app.py
 - The app uses Spotify public Web API via Client Credentials flow (no user login)
 - Audio is not generated or modified; only official Spotify content is searched and previewed
 - The app avoids storing your keys; use env vars or Streamlit secrets
-
